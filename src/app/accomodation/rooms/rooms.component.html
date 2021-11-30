@@ -1,0 +1,238 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" href="images/shorcut.jpg">
+	<title>SignUp</title>
+	<link rel="stylesheet" type="text/css" href="C:\Users\ashwath.kumar\Downloads\theahotel-master\src\app\auth\signup\signup.component.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Passion+One'>
+	<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Oxygen'>
+</head>
+<body>
+	<div class="container">
+		<div class="row main">
+			<div class="panel-heading">
+				<div class="panel-title text-center">
+					<h1 class="title">Reservation</h1>
+					<hr />
+				</div>
+			</div> 
+			<div class="main-login main-center">
+				<form [formGroup]="signupForm" (ngSubmit)="signUp" class="form-horizontal">
+
+					<div class="form-group">
+						<label for="password" class="cols-sm-2 control-label">Purpose</label>
+						<div class="cols-sm-10">
+							<div class="input-group">
+								<!-- <span class="input-group-addon"><i class="fa fa-unlock fa-lg" aria-hidden="true"></i></span> -->
+								<select class="form-control" name="password" id="password">
+                                    <option selected>Choose</option>
+                                    <option>Accomodation</option>
+                                    <option>Celebration Purpose</option>
+									<option>Excursion</option>
+									<option>Welness and Spa</option>
+                                     
+                                    
+                                
+                                </select> 
+                                <br>
+							</div>
+							<div class="message" id="message_password">
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="name" class="cols-sm-2 control-label">Checkin</label>
+						<div class="cols-sm-10">
+							<div class="input-group">
+								<!-- <span class="input-group-addon"><i class="fa fa-user fa-lg" aria-hidden="true"></i></span> -->
+								<input  type="date" class="form-control" name="name" id="name"/>
+							</div>
+							<div class="message" id="message_name">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="email" class="cols-sm-2 control-label">Checkout</label>
+						<div class="cols-sm-10">
+							<div class="input-group">
+								
+								<input type="date" class="form-control" name="email" id="email"/>
+							</div>
+							<div class="message" id="message_mail">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="adderss" class="cols-sm-2 control-label">Number of Rooms</label>
+						<div class="cols-sm-10">
+							<div class="input-group">
+								<!-- <span class="input-group-addon"><i class="fa fa-map-marker fa-lg"></i></span> -->
+								<input formControlName="text" type="address" class="form-control" name="address" id="address"  placeholder="Enter number of rooms"/>
+							</div>
+							<div class="message" id="message_address">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="phone" class="cols-sm-2 control-label">Number of Adults </label>
+						<div class="cols-sm-10">
+							<div class="input-group">
+								<!-- <span class="input-group-addon"><i class="fa fa-phone-square fa-lg" aria-hidden="true"></i></span> -->
+								<select  class="form-control" name="phone" id="phone" >
+                                
+                                    <option selected>Choose</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option> 
+                                    <option>4</option> 
+                                    <option>5</option> 
+                                    <option>6</option> 
+                                    <option>7</option> 
+                                    <option>8</option> 
+                                    <option>9</option> 
+                                    <option>10</option> 
+                                
+                                </select>
+                                    <br>
+							</div>
+							<div class="message" id="message_phone">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="username" class="cols-sm-2 control-label">Number of Childen</label>
+						<div class="cols-sm-10">
+							<div class="input-group">
+								<!-- <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span> -->
+								<select  class="form-control" name="username" id="username">
+                                    <option selected>Choose</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option> 
+                                    <option>4</option> 
+                                    <option>5</option> 
+                                    <option>6</option> 
+                                    <option>7</option> 
+                                    <option>8</option> 
+                                    <option>9</option> 
+                                    <option>10</option> 
+                                
+                                </select> 
+                                <br>
+                                
+							</div>
+							<div class="message" id="message_username">
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="password" class="cols-sm-2 control-label">Room Type</label>
+						<div class="cols-sm-10">
+							<div class="input-group">
+								<!-- <span class="input-group-addon"><i class="fa fa-unlock fa-lg" aria-hidden="true"></i></span> -->
+								<select class="form-control" name="password" id="password">
+                                    <option selected>Choose</option>
+                                    <option>Junior-Suite</option>
+                                    <option>Deluxe-Suite</option>
+                                    <option>Executive-Suite</option> 
+                                    <option>Terrace-Suit</option> 
+									<option>Penthouse-Suit</option> 
+									<option>Villa</option> 
+									<option>Overwater-Banglow</option> 
+									<option>Presidential-Suite</option> 
+									<option>Royal-Suit</option> 
+                                    
+                                
+                                </select> 
+                                <br>
+							</div>
+							<div class="message" id="message_password">
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="password" class="cols-sm-2 control-label">Select ID Proof</label>
+						<div class="cols-sm-10">
+							<div class="input-group">
+								<!-- <span class="input-group-addon"><i class="fa fa-unlock fa-lg" aria-hidden="true"></i></span> -->
+								<select class="form-control" name="password" id="password">
+                                    <option selected>Choose</option>
+                                    <option>AADHAR</option>
+                                    <option>PAN Card</option>
+                                    <option>Voter ID</option> 
+                                    <option>Passport</option> 
+                                    
+                                
+                                </select> 
+                                <br>
+							</div>
+							<div class="message" id="message_password">
+							</div>
+						</div>
+					</div>
+
+					
+
+					<div class="form-group">
+						<label for="confirm" class="cols-sm-2 control-label">Selected ID Number</label>
+						<div class="cols-sm-10">
+							<div class="input-group">
+								<!-- <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span> -->
+								<input  type="text" class="form-control" name="conf_password" id="conf_password"  placeholder="ID Number"/>
+							</div>
+							<div class="message" id="message_conf_password">
+							</div>
+						</div>
+					</div>
+
+                    <div class="form-group">
+						<label for="confirm" class="cols-sm-2 control-label">Reason for stay</label>
+						<div class="cols-sm-10">
+							<div class="input-group">
+								<!-- <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span> -->
+								<input  type="text" class="form-control" name="conf_password" id="conf_password"  placeholder="Reason"/>
+							</div>
+							<div class="message" id="message_conf_password">
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group ">
+                        <a  routerLink="/home">
+						<button type="button" class="btn btn-primary btn-lg btn-block login-button" onclick="checkit()">Book Now</button>
+
+                    </a>
+                    </div>
+				</form>
+			</div>
+			<div class="panel-heading">
+				<div class="panel-title text-center">
+				
+					<hr />
+				</div>
+			</div> 
+		</div>
+	</div>
+    <script>
+        function checkit() {
+          alert("Booking Confirm");
+        }
+        </script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/js.js"></script>
+</body>
+</html>
+              
